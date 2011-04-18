@@ -5,6 +5,17 @@ using namespace std;
 int main()
 {
 
+// do all definitions here:
+// player attributes, 
+//mesages to the user, 
+//questions in a list, etc...
+
+
+
+
+
+
+
 //what is the players name?
 
     string fullname, fname, mname, lname;
@@ -13,7 +24,7 @@ int main()
     cin>>fname>>mname>>lname;
 
     fullname= fname+" "+mname+" "+lname;
-    cout<<fullname<<"\n\n";
+//    cout<<fullname<<"\n\n";
 
 
 //greeting player

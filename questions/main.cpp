@@ -5,6 +5,17 @@ using namespace std;
 int main()
 {
 
+// do all definitions here:
+// player attributes,
+//mesages to the user,
+//questions in a list, etc...
+
+
+
+
+
+
+
 //what is the players name?
 
     string fullname, fname, mname, lname;
@@ -13,7 +24,7 @@ int main()
     cin>>fname>>mname>>lname;
 
     fullname= fname+" "+mname+" "+lname;
-    cout<<fullname<<"\n\n";
+//    cout<<fullname<<"\n\n";
 
 
 //greeting player
@@ -27,7 +38,7 @@ int main()
 //define multiple choice
     string multiple_choice_answers;
     cout<< "Please enter a,b,c,d,e\n";
-    multiple_choice_answers= "a)Excellent\n b)Good\n c)Ok\n d)Fair\n e)Shit\n\n";
+    multiple_choice_answers= " a)Excellent\n b)Good\n c)Ok\n d)Fair\n e)Shit\n\n";
 
 
 //define the questions
@@ -85,6 +96,8 @@ int main()
 
 
 
+// END of Questionaire
+// So print answers..
 
 
         cout<<answer1;
