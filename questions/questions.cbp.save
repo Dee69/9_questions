@@ -33,7 +33,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="main.cpp" />
-		<Unit filename="questionsheader" />
+		<Unit filename="main.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

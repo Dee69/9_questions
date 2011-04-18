@@ -1,5 +1,6 @@
 #include <iostream>
-
+#include <fstream>
+#include "main.h"
 using namespace std;
 
 int main()
@@ -16,10 +17,6 @@ int main()
     string fullname, fname, mname, lname,enter_full_name_instuc;
 
     enter_full_name_instuc="please enter full name\n\n";
-
-//    fullname= fname+" "+mname+" "+lname+"\n\n";
-
-
 
 //defining the multiple questions answers
 
@@ -53,13 +50,9 @@ int main()
 
     cout<<enter_full_name_instuc;
     cin>>fname>>mname>>lname;
-    fullname= fname+" "+mname+" "+lname+"\n\n";
+    fullname= fname+" "+mname+" "+lname+"";
     cout<<fullname;
     cout<<"Hello "+fname;
-
-//greeting player
-
-   // cout<< greeting;
 
 
 //giving instructions to player
@@ -141,6 +134,11 @@ int main()
         cout<<"Answer for Question 7) -\t"+A7+"\n";
         cout<<"Answer for Question 8) -\t"+A8+"\n";
         cout<<"Answer for Question 9) -\t"+A9+"\n";
+
+
+    ofstream answers("/home/dee/Desktop/9_questions.csv", ios::app);
+    answers<<fullname<< "," <<A1<< "," <<A2<< "," <<A3<< "," <<A4<< ","
+           <<A5<< "," <<A6<< "," <<A7<< "," <<A8<< "," <<A9<< "\n";
 
 
     return 0;
