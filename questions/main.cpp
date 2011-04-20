@@ -31,7 +31,7 @@ int main()
     string multiple_choice_answers;
     multiple_choice_answers=" a)Excellent\n b)Good\n c)Ok\n d)Fair\n e)Shit\n\n";
     string instruc;
-    instruc="\n\n Please enter a,b,c,d,e\n\n";
+    instruc="\n\n Please enter a,b,c,d,e:\n\n";
 
 // what is the players name?
     cout<<enter_full_name_instuc;
@@ -83,15 +83,12 @@ int main()
     cin>>A9;
 
 // print answers
-    cout<<"Answer for Question 1) -\t"+A1+"\n";
-    cout<<"Answer for Question 2) -\t"+A2+"\n";
-    cout<<"Answer for Question 3) -\t"+A3+"\n";
-    cout<<"Answer for Question 4) -\t"+A4+"\n";
-    cout<<"Answer for Question 5) -\t"+A5+"\n";
-    cout<<"Answer for Question 6) -\t"+A6+"\n";
-    cout<<"Answer for Question 7) -\t"+A7+"\n";
-    cout<<"Answer for Question 8) -\t"+A8+"\n";
-    cout<<"Answer for Question 9) -\t"+A9+"\n";
+
+int i=1;
+while(i<10,i++) {
+    cout<<") -\t A"<<i<<"\n";
+}
+
 
 // save to file
     ofstream answers("/tmp/9_questions.csv", ios::app);
