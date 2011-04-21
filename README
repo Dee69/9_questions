@@ -1,6 +1,7 @@
-> C++ application to ask questions in the commandline
+C++ application to ask questions in the commandline
 
-## TODO
+TODO
+======
 
 1. make ask player's name the first question in the loop
 2. cope with players with 2 or 4 names
