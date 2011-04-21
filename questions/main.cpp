@@ -3,56 +3,54 @@
 #include "main.h"
 using namespace std;
 
-int main(int argc, char* argv[])
+int main()
 {
 
-// define instructions
-    string greeting;
-    greeting="Hello ";
-    string instruc;
-    instruc="\n\n Please enter a,b,c,d,e:\n\n";
-    string multiple_choice_answers;
-    multiple_choice_answers=" a)Excellent\n b)Good\n c)Ok\n d)Fair\n e)Shit\n\n";
-
-// define player
-    string fullname, fname, mname, lname,enter_full_name_instuc;
-    enter_full_name_instuc="please enter full name\n\n";
+// definitions
+    string greeting, instructions, full_name_instuctions, multiple_choice_options, full_name, first_name, middle_name, last_name;
+    greeting="Bienvenue  ";
+    instructions="Please enter a,b,c,d,e:";
+    multiple_choice_options=" a)Excellent\n b)Good\n c)Ok\n d)Fair\n e)Shit\n";
+    full_name_instuctions="please enter your full name:";
 
 // what is the players name?
-    cout<<enter_full_name_instuc;
-    cin>>fname>>mname>>lname;
-    fullname=fname+" "+mname+" "+lname;
-    cout<<greeting<<fname;
-    cout<<instruc;
+    cout<<full_name_instuctions<<endl;
+    cin>>first_name>>middle_name>>last_name;
+    full_name=first_name+" "+middle_name+" "+last_name;
+    cout<<greeting<<first_name<<endl;
+    cout<<instructions<<endl;
 
-// define questions
-    string questions[8];
-    questions[0]="How are you?\n\n";
-    questions[1]="How is the weather?\n\n";
-    questions[2]="How would you rate .... ??\n\n";
-    questions[3]="Do you like .... ?\n\n";
-    questions[4]="What is your age?\n\n";
-    questions[5]="What time is it?\n";
-    questions[6]="Are you working ... ?\n\n";
-    questions[7]="How do you feel about working there?\n\n";
-    questions[8]="How long have you worked there?\n\n";
+// define questions and answers
+    string questions[15], answers[15];
+    questions[1]="How are you?";
+    questions[2]="How is the weather?";
+    questions[3]="How would you rate "+first_name+"?";
+    questions[4]="Do you like "+first_name+"?";
+    questions[5]="What is your age?";
+    questions[6]="What time is it?";
+    questions[7]="Are you working at the weekend?";
+    questions[8]="How do you feel about working there?";
+    questions[9]="How long have you worked there?";
+    questions[10]="What is your favourite colour?";
+    questions[11]="Who do you most admire?";
+    questions[12]="Why do birds sing so gay?";
+    questions[13]="How much is that doggy in the window?";
+    questions[14]="When was the last time you saw "+first_name+"?";
 
-// define answers
-    string answers[8];
-
-// ask questions
-    for(int i=0; i<=8; i++) {
-        cout<<questions[i];
-        cout<<multiple_choice_answers;
+// ask questions get answers
+    for(int i=1; i<=14; i++) {
+        cout<<i<<": "<<questions[i]<<endl;
+        cout<<multiple_choice_options;
         cin>>answers[i];
     }
 
 // print and save answers
+    cout<<"ANSWERS:"<<endl;
     ofstream save_answers("/tmp/9_questions.csv", ios::app);
-    save_answers<<fullname;
-    for(int i=0; i<=8; i++) {
-        cout<<"A"<<i<<": "<<answers[i]<<"\n";
-        save_answers<<","<<answers[i];
+    save_answers<<full_name;
+    for(int i=1; i<=14; i++) {
+        cout<<"Question "<<i<<": "<<answers[i]<<endl;
+        save_answers<<", "<<answers[i];
     }
     save_answers<<"\n";
 
