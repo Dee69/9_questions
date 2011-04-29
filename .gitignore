@@ -1,0 +1,6 @@
+*.DS_Store
+*.save
+*.layout
+*.depend
+bin/*
+obj/*

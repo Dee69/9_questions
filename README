@@ -1,0 +1,11 @@
+C++ application to ask questions in the commandline
+
+TODO
+======
+
+1. make ask player's name the first question in the loop
+2. cope with players with 2 or 4 names
+3. choose a previous player to ask about
+4. check the player has submitted the correct answer
+5. set number of questions to ask
+6. only show multiple choice options for those questions
